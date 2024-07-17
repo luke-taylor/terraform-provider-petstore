@@ -35,5 +35,8 @@ func (p *petstoreProvider) DataSources(ctx context.Context) []func() datasource.
 }
 
 func (p *petstoreProvider) Resources(ctx context.Context) []func() resource.Resource {
-	return []func() resource.Resource{}
+	return []func() resource.Resource{
+			NewPetResource,
+	}
 }
+
