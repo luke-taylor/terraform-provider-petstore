@@ -1,4 +1,51 @@
 {
+	"datasources": [
+		{
+			"name": "order",
+			"schema": {
+				"attributes": [
+					{
+						"name": "id",
+						"int64": {
+							"computed_optional_required": "required",
+							"description": "ID of order that needs to be fetched"
+						}
+					},
+					{
+						"name": "complete",
+						"bool": {
+							"computed_optional_required": "computed"
+						}
+					},
+					{
+						"name": "pet_id",
+						"int64": {
+							"computed_optional_required": "computed"
+						}
+					},
+					{
+						"name": "quantity",
+						"int64": {
+							"computed_optional_required": "computed"
+						}
+					},
+					{
+						"name": "ship_date",
+						"string": {
+							"computed_optional_required": "computed"
+						}
+					},
+					{
+						"name": "status",
+						"string": {
+							"computed_optional_required": "computed",
+							"description": "Order Status"
+						}
+					}
+				]
+			}
+		}
+	],
 	"provider": {
 		"name": "petstore"
 	},

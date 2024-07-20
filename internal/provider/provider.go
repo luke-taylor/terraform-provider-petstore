@@ -31,8 +31,11 @@ func (p *petstoreProvider) Metadata(ctx context.Context, req provider.MetadataRe
 }
 
 func (p *petstoreProvider) DataSources(ctx context.Context) []func() datasource.DataSource {
-	return []func() datasource.DataSource{}
+	return []func() datasource.DataSource{
+			NewOrderDataSource,
+	}
 }
+
 
 func (p *petstoreProvider) Resources(ctx context.Context) []func() resource.Resource {
 	return []func() resource.Resource{

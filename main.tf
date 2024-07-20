@@ -25,3 +25,10 @@ resource "petstore_pet" "clifford" {
   ]
 }
 
+data "petstore_order" "first_order" {
+  id = 1
+}
+
+output "first_order" {
+  value = data.petstore_order.first_order
+}
